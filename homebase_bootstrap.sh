@@ -39,8 +39,6 @@ if ! [ -x "$(brew)" ]; then
   brew cask install spotify             # Spotify
   brew cask install slack               # Slack
   brew cask install beardedspice        # Bearded Spice
-
-  npm install -g livedown               # Livedown
 fi
 
 # Nix
@@ -51,6 +49,9 @@ if ! [ -x "$(nix-env)" ]; then
   nix-env -iA nixpkgs.neovim
   nix-env -iA nixpkgs.python35Packages.neovim
 fi
+
+# Misc
+npm install -g livedown               # Livedown
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
