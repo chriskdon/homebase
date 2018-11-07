@@ -41,21 +41,14 @@ if ! [ -x "$(brew)" ]; then
   brew cask install beardedspice        # Bearded Spice
 fi
 
-# Nix
-if ! [ -x "$(nix-env)" ]; then
-  curl https://nixos.org/nix/install | sh
-
-  nix-env --install git
-  nix-env -iA nixpkgs.neovim
-  nix-env -iA nixpkgs.python35Packages.neovim
-fi
-
 # Misc
 npm install -g livedown               # Livedown
 
+# Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Setup directories
 mkdir ~/Development
 
+# Add marker for bootstrap complete
 touch ~/.homebase_bootstrap
