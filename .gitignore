@@ -4,10 +4,15 @@
 # Except
 !.gitignore
 !README.md
-!homebase_bootstrap.s
+!homebase_bootstrap.sh
 
 # Bash configs
 !.bash_profile
 
+# Except .config
+!/.config
+
 # Neovim configs
-!.config/nvim/init.vim
+!/.config/nvim
+!/.config/nvim/init.vim
+
