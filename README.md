@@ -16,3 +16,4 @@ Setup and configurations for bootstrapping my personal OSX environment.
 ```
 > ./homebase_bootstrap.sh
 ```
+

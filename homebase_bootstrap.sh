@@ -25,6 +25,8 @@ if ! [ -x "$(brew)" ]; then
   brew install node                     # Node
   brew install nvim                     # Neovim
   brew install go                       # Go
+  brew install cmake                    # CMake
+  brew install scons                    # SCons
   brew cask install haskell-platform    # Haskell
   brew cask install iterm2              # iTerm2
   brew cask install visual-studio-code  # VsCode
@@ -33,6 +35,7 @@ if ! [ -x "$(brew)" ]; then
   brew cask install virtualbox          # VirtualBox
   brew cask install vagrant             # Vagrant 
   brew cask install docker              # Docker
+
 
   # Misc
   brew cask install disk-inventory-x    # Disk Inventory X
@@ -44,8 +47,11 @@ fi
 # Misc
 npm install -g livedown               # Livedown
 
-# Install Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# Setup neovim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim # Install Vundle
+pip3 install --user neovim                       # Install python support for neovim
+vim +PluginInstall +qall                         # Install Vundle plugins
+~/.vim/bundle/YouCompleteMe/install.py --all     # Setup YouCompleteMe
 
 # Setup directories
 mkdir ~/Development

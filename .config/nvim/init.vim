@@ -19,7 +19,8 @@ Plugin 'shime/vim-livedown' " also npm install -g livedown
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy finder
 Plugin 'OrangeT/vim-csharp'
-Plugin 'ElmCast/elm-vim' 
+Plugin 'ElmCast/elm-vim'
+Plugin 'Valloric/YouCompleteMe'
 
 let g:syntastic_always_populate_loc_list = 1
 let g:typescript_indent_disable = 1
@@ -42,7 +43,7 @@ filetype plugin indent on    " required
 
 " == Visuals ==
 if has('patch-7.4.1778')
-  set guicolors
+  " set guicolors
 endif
 if has('nvim')
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
