@@ -5,4 +5,9 @@
 !.gitignore
 !README.md
 !homebase_bootstrap.s
+
+# Bash configs
 !.bash_profile
+
+# Neovim configs
+!.config/nvim/init.vim

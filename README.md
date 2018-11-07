@@ -4,7 +4,7 @@ Setup and configurations for bootstrapping my personal OSX environment.
 
 # Setup
 
-## Setup Repository
+## 1. Setup Repository
 ```
 > cd ~
 > git init
@@ -12,7 +12,7 @@ Setup and configurations for bootstrapping my personal OSX environment.
 > git pull origin master
 ```
 
-## Run Bootstrap
+## 2. Run Bootstrap
 ```
 > ./homebase_bootstrap.sh
 ```

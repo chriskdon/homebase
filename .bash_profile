@@ -5,15 +5,9 @@ base64() {
   openssl base64 -in "$1" | tr -d '\n' | pbcopy
 }
 
-# Get the current ip of this computer
-ip() {
-  ifconfig en0 | grep "inet\s" | cut -d " " -f 2
-}
-
-# Go to projects
-projects() {
-  cd ~/Development/Projects
-}
+## Alias vim to nvim
+alias vim="nvim"
+alias vi="nvim"
 
 ## Development Environments
 

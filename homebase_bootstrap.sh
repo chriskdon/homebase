@@ -23,6 +23,7 @@ if ! [ -x "$(brew)" ]; then
 
   # Dev Tools
   brew install node                     # Node
+  brew install nvim                     # Neovim
   brew cask install haskell-platform    # Haskell
   brew cask install iterm2              # iTerm2
   brew cask install visual-studio-code  # VsCode
