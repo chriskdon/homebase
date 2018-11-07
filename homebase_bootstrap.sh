@@ -38,6 +38,8 @@ if ! [ -x "$(brew)" ]; then
   brew cask install spotify             # Spotify
   brew cask install slack               # Slack
   brew cask install beardedspice        # Bearded Spice
+
+  npm install -g livedown               # Livedown
 fi
 
 # Nix
