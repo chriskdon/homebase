@@ -1,0 +1,8 @@
+# Ignore Everything
+*
+
+# Except
+!.gitignore
+!README.md
+!homebase_bootstrap.s
+!.bash_profile
