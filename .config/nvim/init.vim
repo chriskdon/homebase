@@ -38,6 +38,9 @@ let g:haskell_conceal              = 0
 " otherwise collapsed into a single ellipsis
 let g:haskell_conceal_enumerations = 0
 
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
