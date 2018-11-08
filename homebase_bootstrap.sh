@@ -9,6 +9,8 @@ if [ -f ~/.homebase_bootstrap ]; then
     exit 0
 fi
 
+mkdir .homebase
+
 # Homebrew
 if ! [ -x "$(brew)" ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -22,6 +24,7 @@ if ! [ -x "$(brew)" ]; then
   brew cask install vlc                 # VLC
 
   # Dev Tools
+  brew install git                      # Git
   brew install node                     # Node
   brew install nvim                     # Neovim
   brew install go                       # Go
@@ -35,7 +38,6 @@ if ! [ -x "$(brew)" ]; then
   brew cask install virtualbox          # VirtualBox
   brew cask install vagrant             # Vagrant 
   brew cask install docker              # Docker
-
 
   # Misc
   brew cask install disk-inventory-x    # Disk Inventory X
@@ -52,6 +54,22 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim #
 pip3 install --user neovim                       # Install python support for neovim
 vim +PluginInstall +qall                         # Install Vundle plugins
 ~/.vim/bundle/YouCompleteMe/install.py --all     # Setup YouCompleteMe
+
+# Fancy Git Diff
+cd ~/.homebase
+curl https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy --output diff-so-fancy
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global color.ui true
+git config --global color.diff-highlight.oldNormal    "red bold"
+git config --global color.diff-highlight.oldHighlight "red bold 52"
+git config --global color.diff-highlight.newNormal    "green bold"
+git config --global color.diff-highlight.newHighlight "green bold 22"
+git config --global color.diff.meta       "yellow"
+git config --global color.diff.frag       "magenta bold"
+git config --global color.diff.commit     "yellow bold"
+git config --global color.diff.old        "red bold"
+git config --global color.diff.new        "green bold"
+git config --global color.diff.whitespace "red reverse"
 
 # Setup directories
 mkdir ~/Development
