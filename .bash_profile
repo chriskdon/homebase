@@ -5,6 +5,12 @@ base64() {
   openssl base64 -in "$1" | tr -d '\n' | pbcopy
 }
 
+# Get the process using a TCP port
+# portproc($1-port_number)
+portproc() {
+  lsof -nP -i4TCP:$1 | grep LISTEN
+}
+
 ## Alias vim to nvim
 alias vim="nvim"
 alias vi="nvim"

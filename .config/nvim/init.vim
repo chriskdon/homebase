@@ -57,7 +57,17 @@ colorscheme jellybeans
 set cursorline      " Highlught current line
 set colorcolumn=80  " Show line at the 80 character mark
 
+set autochdir       " Change directory to current file
+
+" == NETRW ==
+let g:netrw_banner    = 0
+let g:netrw_preview   = 1
+let g:netrw_liststyle = 3
+let g:netrw_winsize   = 30
+
 " == Editing ==
+set clipboard+=unnamedplus " Use clipboard directly
+
 set number
 set nowrap
 set showmode
