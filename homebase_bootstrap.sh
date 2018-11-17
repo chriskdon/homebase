@@ -58,7 +58,7 @@ vim +PluginInstall +qall                         # Install Vundle plugins
 # Fancy Git Diff
 cd ~/.homebase
 curl https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy --output diff-so-fancy
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global core.pager "~/.homebase/diff-so-fancy | less --tabs=4 -RFX"
 git config --global color.ui true
 git config --global color.diff-highlight.oldNormal    "red bold"
 git config --global color.diff-highlight.oldHighlight "red bold 52"
