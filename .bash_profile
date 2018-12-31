@@ -15,6 +15,9 @@ portproc() {
 alias vim="nvim"
 alias vi="nvim"
 
+## Override builtin emacs
+alias emacs="/usr/local/Cellar/emacs/26.1_1/bin/emacs"
+
 ## Development Environments
 
 # Go

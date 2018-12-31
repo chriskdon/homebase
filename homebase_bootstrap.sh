@@ -27,6 +27,7 @@ if ! [ -x "$(brew)" ]; then
   brew install git                      # Git
   brew install node                     # Node
   brew install nvim                     # Neovim
+  brew install emacs                    # Emacs
   brew install go                       # Go
   brew install cmake                    # CMake
   brew install scons                    # SCons
